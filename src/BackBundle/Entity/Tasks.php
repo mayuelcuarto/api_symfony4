@@ -65,7 +65,7 @@ class Tasks
      * })
      */
     private $user;
-
+    
     function getTitle() {
         return $this->title;
     }

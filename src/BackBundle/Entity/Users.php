@@ -12,7 +12,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Users
 {
-    
     /**
      * @var string|null
      *
@@ -63,7 +62,7 @@ class Users
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
-    
+
     function getRole() {
         return $this->role;
     }
@@ -119,5 +118,6 @@ class Users
     function setId($id) {
         $this->id = $id;
     }
+
 
 }
