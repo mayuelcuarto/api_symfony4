@@ -78,11 +78,11 @@ class Tasks
         return $this->status;
     }
 
-    function getCreatedAt(): \DateTime {
+    function getCreatedAt() {
         return $this->createdAt;
     }
 
-    function getUpdatedAt(): \DateTime {
+    function getUpdatedAt() {
         return $this->updatedAt;
     }
 

@@ -83,7 +83,7 @@ class Users
         return $this->password;
     }
 
-    function getCreatedAt(): \DateTime {
+    function getCreatedAt() {
         return $this->createdAt;
     }
 
