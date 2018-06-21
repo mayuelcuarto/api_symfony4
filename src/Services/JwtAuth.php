@@ -37,16 +37,17 @@ class JwtAuth{
             
             $jwt = JWT::encode($token, $this->key, 'HS256');
             $decoded = JWT::decode($jwt, $this->key, ['HS256']);
+            $decoded_array = (array) $decoded;
             
-            if($getHash == null){
+            if($getHash != null){
                 $data = $jwt;
             }else{
-                $data = $decoded;
+                $data = $decoded_array;
             }          
         }else{
             $data = [
                 "status" => 'Error',
-                "user"   => 'Login fallido'
+                "data"   => 'Login fallido'
                 ];
         }
         
