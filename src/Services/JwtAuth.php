@@ -2,12 +2,13 @@
 namespace App\Services;
 
 use Firebase\JWT\JWT;
+use Doctrine\ORM\EntityManagerInterface;
 
 class JwtAuth{
     public $manager;
     public $key;
 
-    public function __construct(\Doctrine\ORM\EntityManagerInterface $manager) {
+    public function __construct(EntityManagerInterface $manager) {
         $this->manager = $manager;
         $this->key = 'holaquetalsoylaclavesecreta987654321';
     }
